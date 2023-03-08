@@ -1,0 +1,39 @@
+﻿<Window x:Class="DriverApplication.DriverWin" Icon="/png-transparent-car-computer-icons-old-car-television-logo-car.png"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DriverApplication"
+        mc:Ignorable="d"
+         Title="Driver" Height="450" Width="800" FontFamily="Segoe UI Semibold">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="339*"></RowDefinition>
+            <RowDefinition Height="95*"></RowDefinition>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="559*"></ColumnDefinition>
+            <ColumnDefinition Width="241*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="/pngtree-vector-black-background-with-colored-triangular-contours-or-line-image_108993.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <DataGrid x:Name="DriverGrid" Grid.Row="0" Margin="98,17,97,10" SelectionChanged="DriverGrid_SelectionChanged"></DataGrid>
+        <StackPanel HorizontalAlignment="Center"  Grid.Row="1" Orientation="Horizontal">
+            <Button x:Name="updateButton" Content="Обновить" Click="UpdateDB" Height="52" Width="69" >
+                <UIElement.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </UIElement.RenderTransform>
+            </Button>
+            <Button x:Name="deleteButton" Content="Удалить" Click="deleteButton_Click" Height="52" Width="69" />
+        </StackPanel>
+        <Button x:Name="Back" Content="Выйти" Margin="41,16,41,26" Grid.Column="1" Grid.Row="1" Click="Back_Click"></Button>
+    </Grid>
+</Window>
